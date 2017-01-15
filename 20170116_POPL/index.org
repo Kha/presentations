@@ -729,8 +729,8 @@ lean --compile hello.lean
 "Hello Lean!"
 #+END_SRC
 
-- Goal is to produce efficient native code give a Lean term
-- Assign computational intepretations to programs outside the logic (i.e =io=)
+- Goal is to produce efficient native code given a Lean term
+- Assign computational interpretations to programs outside the logic (i.e =io=)
 - Verify and execute programs with *no* friction
 
 * Native Compiler Design
@@ -751,7 +751,7 @@ lean --compile hello.lean
   calculus to an IR:
     - a C-like imperative language in A Normal Form.
 - Denote IR into C++
-    - easier to prototype and configure then LLVM
+    - easier to prototype and configure than LLVM
     - easily call runtime primitives
     - rely on standard C++ optimizations
 - Enables verification of the compiler from =expr= to =ir=
@@ -809,8 +809,8 @@ meta def compile_defn_to_ir
 
 * Future Work
   - Framework for rewriting based on equality (in the theory)
-    - We can use exisiting simplifier to do optimizations
-  - Formally verifiy compiler
+    - We can use existing simplifier to do optimizations
+  - Formally verify compiler
     - Finish IR typechecker, and type system
     - Give formal semantics to all IRs
     - Apply traditional compiler verification techniques (CompCert, ...)
